@@ -53,6 +53,7 @@ tmp/**/*
 *.patch
 *.swp
 generated
+.tramp_history
 
 # C
 tags
