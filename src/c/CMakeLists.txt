@@ -149,6 +149,7 @@ configure_file(cmake_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/config.h)
 # hashtable library
 set(hashtable_sources src/hashtable/hashtable_itr.c src/hashtable/hashtable.c)
 add_library(hashtable STATIC ${hashtable_sources})
+target_link_libraries(hashtable PUBLIC $<$<PLATFORM_ID:Linux>:m>)
 
 # zookeeper library
 set(zookeeper_sources
